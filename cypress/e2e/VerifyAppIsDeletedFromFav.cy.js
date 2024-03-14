@@ -1,4 +1,3 @@
-import 'cypress-real-events/support'
 import homePage from '../pages/homePage'
 
 
