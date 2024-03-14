@@ -21,7 +21,6 @@ describe('Verify a category is open in the search page', () => {
 
         // assertions, search by Action is made, list is visible, collection response body has movies
         cy.url().should('contain', '/?q=Action');
-        searchPage.mo
         searchPage.moviesList().should('be.visible')
         cy.get('@search').its('response.body.collection').its('length').should('be.greaterThan', 0)
     })
