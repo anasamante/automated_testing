@@ -1,11 +1,7 @@
-This repo contains various examples of testing common scenarios using Cypress
+* Download Node.js
 
-* Cypress Framework POM (cy v12)
+* Download Cypress 
+npm install cypress --save-dev
 
-* Application under test https://bstackdemo.com/
-
-* E2e testing - using POM examples
-
-* API testing examples
-
-* Custom command examples
+* Run Cypress in Chrome open mode
+npm run cy:open

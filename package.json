@@ -11,6 +11,9 @@
   "author": "Ana",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.4.0"
+    "cypress": "^13.6.6"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.12.0"
   }
 }

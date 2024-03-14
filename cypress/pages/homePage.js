@@ -1,35 +1,28 @@
-
 class HomePage {
-    //Elements
-    getUsername(){
-        return cy.get('.username')
+    clickAppsMenuButton(){
+        cy.getDataTestId('main-menu-item-Apps').click()
     }
 
-    getFiltersElement(){
-        return cy.get('.filters')
-    }
-   
-    getProductItems(){
-        return cy.get('.shelf-item')
+    clickSearchMenuButton(){
+        cy.getDataTestId('main-menu-item-Search').click()
     }
 
-    getFilteredVendorButton(){
-        return cy.get('input:checked~.checkmark')
-    }
-    
-    //Methods
-    verifyCorrectUserIsLogged(username){
-        this.getUsername().should('have.text', username)
+    clickAppToAddToFav(){
+        cy.get('body')
+        .realClick()
+        .realPress('Enter')
+        cy.wait(500)
     }
 
-    clickOnAFilter(vendorName){
-        this.getFiltersElement().contains(vendorName).click()
+    deleteSecondAppOnFav(){
+        cy.get('body').realClick()
+        .realPress('ArrowDown')
+        .realPress('ArrowDown')
+        .realPress('ArrowRight')
+        .realPress('Enter', {pressDelay:1000})
+        .realPress('ArrowDown')
+        .realPress('Enter')
     }
-
-    clickOnFilteredVendorButton(){
-        this.getFilteredVendorButton().click()
-    }
-
 }
 
 module.exports = new HomePage();
